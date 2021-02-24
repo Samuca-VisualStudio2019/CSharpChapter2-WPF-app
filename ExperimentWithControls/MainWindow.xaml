@@ -7,7 +7,19 @@
         mc:Ignorable="d"
         Title="Experiment With
 Controls" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="textBox">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height=".5*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Enter a number" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="0,94,0,48" Text="#" TextWrapping="Wrap" FontSize="24"/>
+        <TextBox x:Name="numberTextBox" HorizontalAlignment="Left" Margin="10,49,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="numberTextBox_TextChanged" FontSize="18"/>
 
     </Grid>
 </Window>
