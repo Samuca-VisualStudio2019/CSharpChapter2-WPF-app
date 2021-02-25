@@ -8,14 +8,18 @@
         Title="Experiment With Controls" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="80*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition Height=".5*"/>
         </Grid.RowDefinitions>
+        <Label Content="Enter a Number" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="number" Grid.Column="2" HorizontalAlignment="Center" Text="#" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24"/>
+        <TextBox x:Name="numberTextBox" HorizontalAlignment="Left" Margin="10,49,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18" TextChanged="numberTextBox_TextChanged_1" Grid.ColumnSpan="2" PreviewTextInput="numberTextBox_PreviewTextInput"/>
 
     </Grid>
 </Window>
